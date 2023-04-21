@@ -4,7 +4,7 @@
   "description": "Launcher for offline games",
   "main": "main.js",
   "scripts": {
-    "pckg": "electron-builder",
+    "pckg": "electron-builder -p always",
     "run": "electron .",
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
