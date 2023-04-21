@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+html * {
+	color: white;
+  font-family: 'Comfortaa', cursive;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {font-size: 2em;font-weight: none;}
+h2 {font-size: 1.5em;font-weight: none;}
+h3 {font-size: 1.17em;font-weight: none;}
+h4 {font-size: 1.00em;font-weight: none;}
+h5 {font-size: 0.83em;font-weight: none;}
+h6 {font-size: 0.67em;font-weight: none;}
+
+body {background-color: rgb(18, 18, 18)}
