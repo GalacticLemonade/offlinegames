@@ -2,9 +2,11 @@ const { app, BrowserWindow, ipcMain, shell, dialog, Notification, autoUpdater } 
 const { autoUpdate } = require("electron-updater");
 const log = require("electron-log");
 
+const path = require('path')
+
 log.transports.file.resolvePath = () => path.join("U:/OfflineGames/", '/logs/main.log');
 
-const path = require('path')
+log.log("Application version = " + app.getVersion())
 
 let mainWindow;
 
@@ -45,6 +47,15 @@ if (!gotTheLock) {
 
   autoUpdater.on("update-downloaded", () => {
     log.info("update-downloaded");
+  })
+
+  autoUpdater.on("error", (err) => {
+    log.info("error in autoupdater: " + err);
+  })
+
+  autoUpdater.on("download-progress", (progressTrack) => {
+    log.info("download-progress");
+    log.info(progressTrack);
   })
   
   app.on('open-url', (event, url) => {
