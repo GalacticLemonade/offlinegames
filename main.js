@@ -34,28 +34,6 @@ if (!gotTheLock) {
   // Create mainWindow, load the rest of the app, etc...
   app.whenReady().then(() => {
     createWindow()
-    autoUpdater.checkForUpdates();
-  })
-
-  autoUpdater.on("update-available", () => {
-    log.info("update-available");
-  })
-
-  autoUpdater.on("checking-for-update", () => {
-    log.info("checking-for-update");
-  })
-
-  autoUpdater.on("update-downloaded", () => {
-    log.info("update-downloaded");
-  })
-
-  autoUpdater.on("error", (err) => {
-    log.info("error in autoupdater: " + err);
-  })
-
-  autoUpdater.on("download-progress", (progressTrack) => {
-    log.info("download-progress");
-    log.info(progressTrack);
   })
   
   app.on('open-url', (event, url) => {
