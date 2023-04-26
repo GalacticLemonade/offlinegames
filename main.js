@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, shell, dialog, Notification } = require('electron')
+const { app, BrowserWindow, ipcMain, shell, dialog, Notification, autoUpdater } = require('electron')
 const log = require("electron-log");
 
 const path = require('path')
@@ -33,6 +33,33 @@ if (!gotTheLock) {
   // Create mainWindow, load the rest of the app, etc...
   app.whenReady().then(() => {
     createWindow()
+    if (app.isPackaged) {
+      const server = 'https://your-deployment-url.com'
+      const url = `${server}/update/${process.platform}/${app.getVersion()}`
+    
+      autoUpdater.setFeedURL({ url })
+
+      autoUpdater.checkForUpdates()
+
+      setInterval(() => {
+        autoUpdater.checkForUpdates()
+      }, 60000)
+    }
+  })
+
+  autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+    const dialogOpts = {
+      type: 'info',
+      buttons: ['Restart', 'Later'],
+      title: 'Application Update',
+      message: process.platform === 'win32' ? releaseNotes : releaseName,
+      detail:
+        'A new version has been downloaded. Restart the application to apply the updates.',
+    }
+  
+    dialog.showMessageBox(dialogOpts).then((returnValue) => {
+      if (returnValue.response === 0) autoUpdater.quitAndInstall()
+    })
   })
   
   app.on('open-url', (event, url) => {
