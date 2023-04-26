@@ -3,3 +3,4 @@ dist
 *.exe
 OfflineGames-win32-x64
 main.log
+out/
