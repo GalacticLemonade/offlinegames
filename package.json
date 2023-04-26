@@ -28,7 +28,10 @@
   "config": {
     "forge": {
       "packagerConfig": { 
-        "appCopyright": "Tiny Borb, Inc."
+        "appCopyright": "Tiny Borb, Inc.",
+        "win32metadata.Company": "Tiny Borb, Inc.",
+        "win32metadata.ProductName": "OfflineGames",
+        "icon": "U:/OfflineGames/assets/icon.png"
        },
       "rebuildConfig": { },
       "makers": [
@@ -40,7 +43,7 @@
       "publishers": [ ],
       "plugins": [ ],
       "hooks": { },
-      "buildIdentifier": "my-build"
+      "buildIdentifier": "v1.0.2"
     }
   }
 }
