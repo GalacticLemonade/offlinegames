@@ -31,7 +31,12 @@
         "appCopyright": "Tiny Borb, Inc."
        },
       "rebuildConfig": { },
-      "makers": [ ],
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "comfig": {}
+        }
+      ],
       "publishers": [ ],
       "plugins": [ ],
       "hooks": { },
