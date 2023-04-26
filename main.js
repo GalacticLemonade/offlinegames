@@ -3,6 +3,8 @@ const log = require("electron-log");
 
 const path = require('path')
 
+if (require('electron-squirrel-startup')) app.quit();
+
 log.transports.file.resolvePath = () => path.join("U:/OfflineGames/", '/logs/main.log');
 
 log.log("Application version = " + app.getVersion())
