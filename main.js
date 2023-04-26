@@ -37,7 +37,7 @@ if (!gotTheLock) {
     createWindow()
     if (app.isPackaged) {
       const server = 'https://hazel4.vercel.app/'
-      const url = `${server}/update/${process.platform}/${app.getVersion()}`
+      const url = `${server}/download`
     
       autoUpdater.setFeedURL({ url })
 
