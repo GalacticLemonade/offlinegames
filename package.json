@@ -1,6 +1,6 @@
 {
   "name": "offlinegameslauncher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Launcher for offline games",
   "main": "main.js",
   "scripts": {
