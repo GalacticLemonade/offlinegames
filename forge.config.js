@@ -22,7 +22,7 @@ module.exports = {
           name: 'offlinegames'
         },
         prerelease: false,
-        authToken: ""
+        authToken: process.env.GH_KEY
       }
     }
   ],
