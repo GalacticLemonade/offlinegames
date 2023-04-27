@@ -40,7 +40,16 @@
           "comfig": {}
         }
       ],
-      "publishers": [ ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "owner": "GalacticLemonade",
+            "name": "offlinegames"
+          },
+          "prerelease": "false"
+        }
+      ],
       "plugins": [ ],
       "hooks": { },
       "buildIdentifier": "v1.0.2"

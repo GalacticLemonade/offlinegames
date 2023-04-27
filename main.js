@@ -47,6 +47,10 @@ if (!gotTheLock) {
     }
   })
 
+  autoUpdater.on('error', (message) => {
+    log.error('There was a problem updating the application: ' + message);
+  })
+
   autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
     const dialogOpts = {
       type: 'info',
