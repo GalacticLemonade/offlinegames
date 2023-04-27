@@ -45,9 +45,11 @@
           "name": "@electron-forge/publisher-github",
           "config": {
             "owner": "GalacticLemonade",
-            "name": "offlinegames"
+            "name": "offlinegames",
+            "authToken": "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"
           },
-          "prerelease": "false"
+          "prerelease": "false",
+          "authToken": "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"
         }
       ],
       "plugins": [ ],
