@@ -15,7 +15,7 @@ module.exports = {
           owner: 'GalacticLemonade',
           name: 'offlinegames'
         },
-        authToken: "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",
+        authToken: "",
         prerelease: true
       }
     }
