@@ -37,7 +37,7 @@
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
-          "comfig": {}
+          "comfig": {  }
         }
       ],
       "publishers": [
@@ -47,7 +47,8 @@
             "owner": "GalacticLemonade",
             "name": "offlinegames"
           },
-          "prerelease": "false"
+          "prerelease": "false",
+          "authToken": "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"
         }
       ],
       "plugins": [ ],
