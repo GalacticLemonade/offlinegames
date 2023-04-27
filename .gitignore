@@ -1,5 +1,4 @@
 node_modules
+forge.config.js
 *.exe
-out/
-forge.config.js
-forge.config.js
+out
