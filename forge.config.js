@@ -21,6 +21,7 @@ module.exports = {
           owner: 'GalacticLemonade',
           name: 'offlinegames'
         },
+        draft: false,
         prerelease: false,
         authToken: process.env.GH_KEY
       }
