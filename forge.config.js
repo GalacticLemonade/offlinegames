@@ -33,5 +33,5 @@ module.exports = {
   hooks: { 
 
   },
-  buildIdentifier: 'v1.0.2'
+  buildIdentifier: 'v1.0.3'
 }
